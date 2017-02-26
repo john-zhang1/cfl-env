@@ -17,7 +17,7 @@ Vagrant.configure(2) do |config|
   # Use NFS
   config.vm.synced_folder ".", "/vagrant", type: "nfs"
 
-
+  config.vm.network "private_network", type: "dhcp"
 
   # Configure DSpace system Requirements
   config.vm.provider "vmware_fusion" do |v|
